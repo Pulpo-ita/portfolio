@@ -1,0 +1,239 @@
+:root{
+    --first:  rgba(0,255,0,1);
+}
+
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+
+.header{
+    height: 100vh;
+    background-image: url("../img/bg-image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.header::before{
+    content: "";
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 50px !important;
+        border-right: solid 3px rgba(0,255,0,.75);
+        white-space: nowrap;
+        overflow: hidden;     
+        font-size: 28px;
+        color: rgba(255,255,255,.70);
+        
+        margin: 0 auto;
+    }
+    
+    /* Animation */
+    h1 {
+        animation: animated-text 4s steps(29,end) 1s 1 normal both,
+        animated-cursor 600ms steps(29,end) infinite;
+    } 
+    
+    
+    /* text animation */
+    
+    @keyframes animated-text{
+        from{width: 0;}
+        to{width: 500px;}
+    }
+    
+    /* cursor animations */
+    
+    @keyframes animated-cursor{
+        from{border-right-color: rgba(0,255,0,.75);}
+        to{border-right-color: transparent;}
+    } 
+
+    .r-link{
+        display: var(--rLinkDisplay, inline-flex) !important;
+    }
+    
+    .r-link[href]{
+        color: var(--rLinkColor) !important;
+        text-decoration: var(--rLinkTextDecoration, none) !important;
+    }
+    
+    .text-underlined{
+        
+        
+        --uiTextUnderlinedLineHeight: var(--textUnderlinedLineHeight, 2px); /* 1 */
+        --uiTextUnderlinedLineGap: var(--textUnderlinedLineGap, .5rem);
+        --uiTextUnderlinedPaddingBottom: calc(var(--uiTextUnderlinedLineHeight) + var(--uiTextUnderlinedLineGap));
+        
+        padding-bottom: var(--uiTextUnderlinedPaddingBottom) !important;
+        position: var(--textUnderlinedPosition, relative) !important;
+        z-index: var(--textUnderlinedZindex, 1) !important;
+    }
+    
+    .text-underlined::after{
+        content: "";
+        width: var(--textUnderlinedLineWidht, 100%) !important;
+        height: var(--uiTextUnderlinedLineHeight) !important;
+        background-image: var(--textUnderlinedBackgroundImage, linear-gradient(to top, var(--textUnderlinedLineColor, currentColor) 30%, rgba(0, 0, 0, 0) 45%)) !important;
+        
+        position: absolute;
+        left: var(--textUnderlinedLineLeft, 0) !important;
+        bottom: var(--textUnderlinedLineBottom, 0) !important;
+        z-index: var(--textUnderlinedLineZindex, -1) !important;
+    }
+    
+    
+    
+    .link{
+        --textUnderlinedLineHeight: 20%;
+        --textUnderlinedLineGap: 0;
+        --textUnderlinedLineColor: var(--first);
+        
+        padding-left: .75rem;
+        padding-right: .75rem;
+    }
+    
+    .link::after{
+        will-change: width;
+        transition: width .5s ease-out;
+        transform: rotate(-2deg);
+        transform-origin: left bottom;
+    }
+    
+    .link:hover{
+        --textUnderlinedLineWidht: 0;
+    }
+    
+    .link:hover::after{
+        transition-duration: .5s;
+    }
+    
+    /*
+    * These styles for text decoration. The demo will be work without it
+    */
+    
+    .link{
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    
+    .link:focus{
+        outline: 2px solid var(--first);
+        outline-offset: .5rem;
+    }
+    
+   
+  }
+
+  html {
+	scroll-behavior: smooth;
+}
+
+.navbar-default{
+    transition:500ms ease;
+    background:transparent;
+  }
+  .navbar-default.scrolled{
+    background:white;
+  }
+
+.nav-link.scrolled{
+    color: black;
+}
+
+.text-first{
+    color: var(--first);
+}
+
+
+
+.card {
+    width: 280px;
+    height: 360px;
+    border-radius: 15px;
+    padding: 1.5rem;
+    background: white;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  }
+  .card:hover {
+    transform: translateY(20px);
+  }
+  .card:hover:before {
+    opacity: 1;
+  }
+  .card:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+  }
+  .card .info {
+    position: relative;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+  }
+  .card .info h1 {
+    margin: 0px;
+  }
+  
+  .card .info button {
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  .card .info button:hover {
+    background: var(--first);
+    color: white;
+  }
