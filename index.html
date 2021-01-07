@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-    
+
+    <!-- Favicon -->
+    <link rel="icon" href="http:/android-icon-192x192.png" type="image/png" />
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,9 +23,9 @@
     <title>A_C</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <nav id="navbar" class="navbar fixed-top navbar-default navbar-expand-lg navbar-light ">
-            <a class="navbar-brand text-white" style="font-size: 20px;" href="#">A_C</a>
+    
+        <nav id="navbar" style="height:70px;" class="navbar fixed-top navbar-default navbar-expand-lg navbar-light " >
+            <img id="myLogo" class="navbar-brand text-white" style="width: 80px;" src="./img/logo-bianco.png"></img>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-angle-down text-white"></i>
             </button>
@@ -32,10 +35,10 @@
                     <li class="nav-item active r-link link text-underlined ">
                         <a class="nav-link text-white" href="#aboutme">About me</a>
                     </li>
-                    <li class="nav-item active r-link link text-underlined mx-1 ">
+                    <li class="nav-item active r-link link text-underlined  ">
                         <a class="nav-link text-white" href="#skills">Skills</a>
                     </li>
-                    <li class="nav-item active r-link link text-underlined mx-1 ">
+                    <li class="nav-item active r-link link text-underlined  ">
                         <a class="nav-link text-white" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item active r-link link text-underlined ">
@@ -45,7 +48,7 @@
                 
             </div>
         </nav>
-    </div>
+   
     
     
     <header>
@@ -61,46 +64,47 @@
         
     </header>
     
-    <div id="aboutme" data-aos="fade-right" data-aos-duration="2500" class="container hidden-x my-5 py-5">
-        <div class="row " style="height: 50vh;">
+    <div id="aboutme" data-aos="fade-up" data-aos-duration="2500" class="container  my-5 py-5">
+        <div class="row " style="height: 30vh;">
             <div class="col-12">
                 <h2 class="text-dark h1">About <span class="text-first font-weight-bold">Me</span> </h2>
-                <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est illum sunt dolorem animi, dolor dolore provident asperiores placeat, excepturi a labore iure molestias. Ipsam at saepe ipsa repudiandae libero hic?</p>
+                <p class="h3">Ho conseguito un diploma in perito informatico, ho sempre avuto la passione per lo <b> sviluppo web</b> e dopo quasi 8 anni di lavoro nella ristorazione ho deciso di entrare in questo mondo, ho frequentato il coding bootcamp di Aulab che mi ha dato delle <b>basi</b> per farlo </p>
             </div>
         </div>
     </div>
     
-    <div id="skills" data-aos="fade-left" data-aos-duration="2500" class="container hidden-x my-5 py-5" >
+    <div id="skills" data-aos="fade-up" data-aos-duration="2500" class="container  my-5 py-5" >
         <div class="row " >
             <div class="col-12">
                 <h2 class="text-dark h1 mb-4 pb-4 ">Skills </h2>
             </div>
+
+        </div>
             <div class="row">
-                <div class="col-12 col-md-4"><img class="img-fluid" style="width: 60%;" src="./img/css.png" alt=""></div>
-                <div class="col-12 col-md-4"><img class="img-fluid" style="width: 56%;" src="./img/html.png" alt=""></div>
+                <div class="col-12 col-md-4"><img class="img-fluid" style="width: 60%;"  src="./img/css.png" alt=""></div>
+                <div class="col-12 col-md-4"><img class="img-fluid" style="width: 53%;"  src="./img/html.png" alt=""></div>
                 <div class="col-12 col-md-4"><img class="img-fluid" style="width: 60%;" src="./img/js.png" alt=""></div> 
-            </div>
-            <div  class="row">
-                <div class="col-12 col-md-4"><img class="img-fluid" style="width: 65%;" src="./img/bootstrap.png" alt=""></div>
+            
+                <div class="col-12 col-md-4"><img class="img-fluid" style="width: 60%;" src="./img/bootstrap.png" alt=""></div>
                 <div class="col-12 col-md-4"><img class="img-fluid" style="width: 60%;" src="./img/laravel.png" alt=""></div>
                 <div class="col-12 col-md-4"><img class="img-fluid" style="width: 60%;" src="./img/mysql.png" alt=""></div>
             </div>
-        </div>
+        
     </div>
     
-    <div id="portfolio" data-aos="fade-right" data-aos-duration="2500" class="container hidden-x my-5 py-5">
+    <div id="portfolio" data-aos="fade-up" data-aos-duration="2500" class="container  my-5 py-5">
         <div class="row">
             <div class="col-12">
                 <h2 class="text-dark h1 mb-4 pb-4 ">Latest <span class="text-first font-weight-bold">Work</span> </h2>
             </div>
-            
+        </div>
             <div class="row">
                 <div class="col-12 col-md-3">
                     <div class="card"><img src="./img/works/presto.png"/>
                         <div class="info">
                             <div class="h2 text-first">Presto.it</div>
                             <p>Sito annunci clone di Subito.it </p>
-                            <button href="">Check It!</button>
+                            <!-- <button href="">Check It!</button> -->
                         </div>
                     </div>
                 </div>
@@ -109,7 +113,7 @@
                         <div class="info">
                             <div class="h2 text-first">Blog Marvel</div>
                             <p>Blog dedicato al mondo Marvel</p>
-                            <button href="">Check It!</button>
+                            <!-- <button href="">Check It!</button> -->
                         </div>
                     </div>
                 </div>
@@ -118,7 +122,7 @@
                         <div class="info">
                             <div class="h2 text-first">Studio Dentistico</div>
                             <p>Sito dedicato ad uno studio Dentistico</p>
-                            <button href="">Check It!</button>
+                            <!-- <button href="">Check It!</button> -->
                         </div>
                     </div>
                 </div>
@@ -127,18 +131,18 @@
                         <div class="info">
                             <div class="h2 text-first">Landing Page</div>
                             <p>Prima landing page realizzata</p>
-                            <button href="">Check It!</button>
+                            <!-- <button href="">Check It!</button> -->
                         </div>
                     </div>
                 </div>
                 
                 
                 
-            </div>
+            
         </div>
     </div>
     
-    <div id="contacts" data-aos="fade-left" data-aos-duration="2500" class="container my-5 py-5">
+    <div id="contacts" data-aos="fade-up" data-aos-duration="2500" class="container my-5 py-5">
         <div class="row">
             <div class="col-12">
                 <h2 class="text-dark h1 mb-4 pb-4 ">Contacts </h2>
@@ -213,10 +217,12 @@
                 var scroll = $(window).scrollTop();
                 
                 if (scroll >= 200) {
+                    document.getElementById("myLogo").src= "./img/logo-nero.png";
                     navlink.removeClass('text-white').addClass("text-dark");
                     navbrand.removeClass('text-white').addClass("text-dark");
                     
                 } else {
+                    document.getElementById("myLogo").src= "./img/logo-bianco.png";
                     navlink.removeClass("text-dark").addClass('text-white');
                     navbrand.removeClass("text-dark").addClass('text-white');
                     
